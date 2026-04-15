@@ -91,6 +91,12 @@ services:
       - nginx_logs:/var/log/nginx
     networks:
       - pentagi-network
+    # keep nginx logs for debugging; rotate weekly to avoid filling disk
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "7"
 
 volumes:
   postgres_data:
