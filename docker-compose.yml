@@ -96,7 +96,7 @@ services:
       driver: "json-file"
       options:
         max-size: "10m"
-        max-file: "14"
+        max-file: "7"
 
 volumes:
   postgres_data:
